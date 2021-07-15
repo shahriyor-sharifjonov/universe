@@ -15,6 +15,7 @@ body{
 a{
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 
@@ -40,6 +41,14 @@ a{
 // ======================header=========================
 // =====================================================
 
+.logo{
+  z-index: 1;
+
+  &__img{
+    z-index: 1;
+  }
+}
+
 .header{
   padding: 25px 0;
 
@@ -47,6 +56,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
   }
 
   &__menu{
