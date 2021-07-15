@@ -8,6 +8,8 @@ const link2 = document.querySelector('.link-2');
 const link3 = document.querySelector('.link-3');
 const link4 = document.querySelector('.link-4');
 const link5 = document.querySelector('.link-5');
+const lang = document.querySelector('.header__lang');
+const headerBtn = document.querySelector('.header__btn');
 
 const tl = new TimelineMax();
 
@@ -21,6 +23,9 @@ tl.fromTo(elon, 0.8, { transform: 'scale(0)', opacity: '0' }, { transform: 'scal
   .fromTo(link3, .5, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.8')
   .fromTo(link4, .6, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.7')
   .fromTo(link5, .7, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.6')
+  .fromTo(headerBtn, .8, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.5')
+  .fromTo(lang, .9, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.6')
+  
 
 
 
