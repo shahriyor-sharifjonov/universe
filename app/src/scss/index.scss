@@ -934,6 +934,14 @@ section:not(start){
 .footer{
   margin-top: 150px;
   background: #fff;
+  color: #232323;
+
+  &__title{
+    @include media($lg){
+      text-align: center;
+      margin-top: 50px;
+    }
+  }
 
   &__img{
     max-width: 100%;
@@ -942,5 +950,59 @@ section:not(start){
     margin-top: -5px;
   }
 
-  
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 70px;
+
+    @include media($lg){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__col__df{
+    display: flex;
+
+    @include media($lg){
+      margin-top: 50px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__list{
+    list-style: none;
+
+    @include media($lg){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__li{
+    margin: 10px 0;
+
+    @include media($lg){
+      text-align: center;
+    }
+  }
+
+  &__btn{
+
+    @media (max-width: 1200px){
+        margin: 0;
+    }
+  }
+  &__lang{
+
+    @media (max-width: 1200px){
+        margin: 0 15px 0 ;
+    }
+
+    @include media($lg){
+      order: -1;
+      margin-bottom: 25px;
+    }
+  }
 }
