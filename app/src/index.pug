@@ -122,9 +122,41 @@ html(lang="en")
           h2.title График
           img(src="images/schedule.webp", alt="").schedule__img
       section.answers
-        h2.title Вопросы и ответы
+        .answers__row 
+          .container
+            .answers__col
+              h2.title Вопросы и ответы
+              .dropdown#dropdown
+                button(onclick="drop()").dropdown__btn Как начать зарабатывать? 
+                  svg(width="29" height="52" viewBox="0 0 29 52" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M28.0772 24.573L4.09731 0.588034C3.31163 -0.197346 2.03961 -0.196026 1.25525 0.592096C0.471502 1.38012 0.473527 2.65665 1.2593 3.44264L23.8119 26.0001L1.25849 48.5574C0.472818 49.3435 0.470793 50.6193 1.25444 51.4074C1.64763 51.8025 2.16274 52 2.67785 52C3.19164 52 3.70472 51.8038 4.09721 51.4114L28.0772 27.427C28.4556 27.0494 28.668 26.5355 28.668 26.0001C28.668 25.4647 28.455 24.9514 28.0772 24.573Z" fill="white")
+                .dropdown__content
+                  p.bropdown__p Lorem ipsum dolor sit amet.
+              .dropdown#dropdown2
+                button(onclick="drop2()").dropdown__btn Какая минимальная и максимальная сумма депозита?
+                  svg(width="29" height="52" viewBox="0 0 29 52" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M28.0772 24.573L4.09731 0.588034C3.31163 -0.197346 2.03961 -0.196026 1.25525 0.592096C0.471502 1.38012 0.473527 2.65665 1.2593 3.44264L23.8119 26.0001L1.25849 48.5574C0.472818 49.3435 0.470793 50.6193 1.25444 51.4074C1.64763 51.8025 2.16274 52 2.67785 52C3.19164 52 3.70472 51.8038 4.09721 51.4114L28.0772 27.427C28.4556 27.0494 28.668 26.5355 28.668 26.0001C28.668 25.4647 28.455 24.9514 28.0772 24.573Z" fill="white")
+                .dropdown__content
+                  p.bropdown__p Lorem ipsum dolor sit amet.
+              .dropdown#dropdown3
+                button(onclick="drop3()").dropdown__btn Какие существуют риски?
+                  svg(width="29" height="52" viewBox="0 0 29 52" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M28.0772 24.573L4.09731 0.588034C3.31163 -0.197346 2.03961 -0.196026 1.25525 0.592096C0.471502 1.38012 0.473527 2.65665 1.2593 3.44264L23.8119 26.0001L1.25849 48.5574C0.472818 49.3435 0.470793 50.6193 1.25444 51.4074C1.64763 51.8025 2.16274 52 2.67785 52C3.19164 52 3.70472 51.8038 4.09721 51.4114L28.0772 27.427C28.4556 27.0494 28.668 26.5355 28.668 26.0001C28.668 25.4647 28.455 24.9514 28.0772 24.573Z" fill="white")
+                .dropdown__content
+                  p.bropdown__p Lorem ipsum dolor sit amet.
+            .answers__col
+              img(src="images/answers.webp", alt="").answers__img
     footer.footer
+      img(src="images/footer.webp", alt="").footer__img
+      .footer__row.container
+        .footer__col
+          img(src="images/logo-dark.webp", alt="")
+        .footer__col
+        .footer__col
+        .footer__col
+
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js")
+    script(src="scripts/drop.js")
     script(src="scripts/index.js") 
