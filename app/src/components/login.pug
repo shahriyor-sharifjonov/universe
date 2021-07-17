@@ -1,0 +1,20 @@
+mixin login()
+  .black-log
+  .login
+    button(onclick="closeLogin()").closeRegister
+      svg(width="107" height="107" viewBox="0 0 107 107" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(fill-rule="evenodd" clip-rule="evenodd" d="M25.456 77.0746C25.0655 77.4652 25.0655 78.0983 25.456 78.4889L27.5774 80.6102C27.9679 81.0007 28.601 81.0007 28.9916 80.6102L53.0332 56.5685L77.0748 80.6102C77.4654 81.0007 78.0985 81.0007 78.489 80.6102L80.6104 78.4889C81.0009 78.0983 81.0009 77.4652 80.6104 77.0746L56.5687 53.033L80.6104 28.9914C81.0009 28.6009 81.0009 27.9677 80.6104 27.5772L78.489 25.4558C78.0985 25.0653 77.4654 25.0653 77.0748 25.4558L53.0332 49.4975L28.9916 25.4558C28.601 25.0653 27.9679 25.0653 27.5774 25.4558L25.456 27.5772C25.0655 27.9677 25.0655 28.6009 25.456 28.9914L49.4977 53.033L25.456 77.0746Z" fill="#00E2FF")
+    .register__content
+      h1.register__content__title Мой аккаунт
+      form.register__content__form
+        .register__content__form__col
+          .register__content__form__input-div.big 
+            label(for="login").register__content__form__label Логин
+            input(type="text" id="login").register__content__form__input.big
+      form.register__content__form
+        .register__content__form__col
+          .register__content__form__input-div.big 
+            label(for="parol").register__content__form__label Пароль
+            input(type="text" id="parol").register__content__form__input.big
+        button(type="submit").register__btn Войти
+        button(onclick="openRegister()").register__link Войти в аккаунт
