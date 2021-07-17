@@ -655,6 +655,78 @@ section:not(start){
 // =====================================================
 
 .statistics{
+  position: relative;
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include media(1200){
+      align-items: center;
+    }
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    max-width: 90%;
+    width: 100%;
+
+    @include media(1200){
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+    }
+  }
+
+  &__col{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media(1200){
+      width: 50%;
+      margin-left: 0;
+    }
+    @include media(1200){
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__img{
+    position: absolute;
+    max-height: 140%;
+    left: 100px;
+    z-index: -2;
+
+    @include media(1200){
+      left: 50%;
+      transform: translateX(-50%);
+      max-height: 100%;
+    }
+    @include media($sm){
+      max-width: 100%;
+      left: -10%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__title{
+    text-align: center;
+    font-size: 34px;
+    -webkit-text-stroke: 0.3px #00E2FF;
+    color: #132C33;
+    margin-bottom: 10px;
+  }
+
+  &__p{
+    text-align: center;
+  }
 
 }
 
