@@ -12,18 +12,20 @@ html(lang="en")
       nav.header__nav.container 
         a(href="#!").logo 
           img(src="images/logo.webp", alt="Universe").logo__img  
+        button.header__button 
+          span.header__button-line
         .header__menu 
           ul.header__list
-            li 
-              a(href="#!").header__link.link-1 Меню
-            li 
-              a(href="#!").header__link.link-2 Меню
-            li 
-              a(href="#!").header__link.link-3 Меню
-            li 
-              a(href="#!").header__link.link-4 Меню
-            li 
-              a(href="#!").header__link.link-5 Меню
+            li.link-1
+              a(href="#!").header__link Меню
+            li.link-2
+              a(href="#!").header__link Меню
+            li.link-3
+              a(href="#!").header__link Меню
+            li.link-4
+              a(href="#!").header__link Меню
+            li.link-5
+              a(href="#!").header__link Меню
           a(href="profile.html").header__btn Мой аккаунт
           a(href="#!").header__lang 
             svg(width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -32,17 +34,30 @@ html(lang="en")
     main.main#main
       section.intro
         img(src="images/bg.webp", alt="background image" data-value="5").intro__bg.parallax
-        .intro__row 
+        .intro__row.container
           .intro__col
             img(src="images/elips.webp", alt="ellipse" data-value="1").intro__el.parallax
             img(src="images/elon.webp", alt="elon musk" data-value="-1").intro__img.parallax
-          .intro__col.half-container
+          .intro__col
             h1.intro__title Инвестиции в будущее с великими умами
             a(href="#!").intro__btn Инвестировать
       section.about
-        h2.title О команде
+        .about__row
+          .container
+            .about__col
+              h2.title О команде
+              p.about__p Я профессор Томас Лорен и через мгновение я покажу простой способ заработать действительно большие деньги. Вы узнаете, как заработать в день 100-150€, на 7 дней, окажешься с 1000€ наличными, и через месяц даже 5000 €. Буквально через несколько десятков секунд я открою каждого конкретного метода, который – если он сделает хотя бы половину того,  что делает меня – тебе начать зарабатывать суммы денег.
+            .about__col
+              img(src="images/about.webp", alt="").about__img
       section.benefit
-        h2.title Как и сколько вы получите
+        .benefit__row 
+          .container 
+            .benefit__col
+              img(src="images/benefits.webp", alt="").benefit__img
+            .benefit__col
+              h2.title Как и сколько вы получите
+              p.benefit__p Доходность до <span>3000%</span>  в месяц. Мы используем новешие криптовалюты, которые только вышли на рынок и на этом мы взлетаем вверх по графику доходности.
+              a(href="#!").benefit__btn Инвестировать 
       section.start
         h2.title Как начать работать с нами
       section.statistics

@@ -18,19 +18,15 @@ tl.fromTo(elon, 0.8, { transform: 'scale(0)', opacity: '0' }, { transform: 'scal
   .fromTo(title, 1.2, { opacity: '0', transform: 'translateX(100%)' }, { opacity: '1', transform: 'translateX(0)', ease: Power2.easeInOut }, '-=1.2')
   .fromTo(btn, 0.5, { opacity: '0', x: 30}, { opacity: '1', x: 0, ease: Power2.easeInOut }, '-=0.5')
   .fromTo(logo, .5, { opacity: '0', x: 30}, { opacity: '1', x: 0, ease: Power2.easeInOut }, '-=0.5')
-  .fromTo(link1, .3, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=1')
-  .fromTo(link2, .4, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.9')
-  .fromTo(link3, .5, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.8')
-  .fromTo(link4, .6, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.7')
-  .fromTo(link5, .7, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.6')
-  .fromTo(headerBtn, .8, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.5')
-  .fromTo(lang, .9, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.6')
+  .fromTo(link1, .6, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=1.2')
+  .fromTo(link2, .7, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=1.1')
+  .fromTo(link3, .8, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=1')
+  .fromTo(link4, .9, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.9')
+  .fromTo(link5, 1, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.8')
+  .fromTo(headerBtn, 0.3, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.7')
+  .fromTo(lang, 0.3, { opacity: '0', y: 30}, { opacity: '1', y: 0, ease: Power2.easeInOut }, '-=0.6')
   
 
-
-
-
-  
   document.addEventListener("mousemove", parallax);
   function parallax(e){
     document.querySelectorAll(".parallax").forEach(function(move){
@@ -42,3 +38,25 @@ tl.fromTo(elon, 0.8, { transform: 'scale(0)', opacity: '0' }, { transform: 'scal
       move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
     });
   }
+
+
+const headerButton: HTMLButtonElement =
+document.querySelector(".header__button");
+const headerMenu: HTMLUListElement = document.querySelector(".header__menu");
+let menuOpened = false;
+const menuToggle = () => {
+  menuOpened = !menuOpened;
+  headerButton.classList.toggle("open");
+  headerMenu.classList.toggle("open");
+};
+
+headerButton.onclick = menuToggle;
+
+window.onclick = (e: MouseEvent) => {
+  if (
+    menuOpened &&
+    !e.composedPath().includes(headerButton) &&
+    !e.composedPath().includes(headerMenu)
+  )
+    menuToggle();
+};
