@@ -18,11 +18,12 @@ a{
   cursor: pointer;
 }
 
-section:not(intro){
+section:not(intro),
+section:not(start){
   margin-top: 100px;
 
   @include media($md){
-    margin-top: 50px;
+    margin-top: 80px;
   }
 }
 
@@ -450,6 +451,95 @@ section:not(intro){
 // =====================================================
 
 .benefit{
+
+  &__row{
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    .container{
+      display: flex;
+      align-items: center;
+      height: 100vh;
+
+      @include media($lg){
+        height: max-content;
+      }
+    }
+  }
+
+  &__col{
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:last-child{
+
+      @include media($md){
+        max-width: 93%;
+      }
+    }
+    &:first-child{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      @include media($md){
+        display: none;
+      }
+    }
+  }
+
+  &__img{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__title{
+    text-align: right;
+  }
+
+  &__p{
+    margin-top: 50px;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 203.7%;
+    letter-spacing: 0.025em;
+    color: #FFFFFF;
+    text-align: right;
+
+    span{
+      color: #00E2FF;
+    }
+  }
+
+  &__btn{
+    text-align: right;
+    margin-top: 30px;
+    transition: 300ms ease-in-out;
+    background: linear-gradient(95.85deg, #00E2FF 11.33%, #126E83 107.64%);
+    padding: 20px 100px;
+    max-width: max-content;
+    margin: 30px 0 100px auto;
+    border-radius: 20px;
+
+    &:hover{
+      box-shadow: 0 0 70px -10px #00E2FF;
+    }
+
+    @include media($md){
+      margin: 30px 0 80px auto;
+    }
+    @include media($sm){
+      padding: 10px 50px;
+    }
+  }
 
 }
 
