@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Profile
+    link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .profile
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide.menu 
+            include components/sidebar.pug
+            +sidebar 
+          .swiper-slide.content
+            .menu-button
+              .bar
+              .bar
+              .bar
+            p Content slide
+    //- .profile__row
+    //-   include components/sidebar.pug
+    //-   +sidebar 
+    //-   .profile__content 
+    //-     include components/header.pug
+    //-     +header
+
+    
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="scripts/profile.js")
+    script(src="scripts/drop.js")
