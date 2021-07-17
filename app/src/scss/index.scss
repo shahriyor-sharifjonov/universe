@@ -736,6 +736,29 @@ section:not(start){
 
 .payments{
 
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  &__col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+
+    &__title{
+      width: 100%;
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid #00E2FF;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+  }
+
 }
 
 // =====================================================
@@ -743,6 +766,20 @@ section:not(start){
 // =====================================================
 
 .schedule{
+
+  h2{
+    text-align: right;
+  }
+
+  &__img{
+    max-width: 100%;
+    width: 100%;
+    margin-top: 100px;
+
+    @include media($lg){
+      margin-top: 50px;
+    }
+  }
 
 }
 
