@@ -1268,15 +1268,20 @@ section:not(start){
 // =====================================================
 
 .sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 320px;
   width: 100%;
   background: #115362;
   min-height: 100vh;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: start;
   padding-top: 25px;
+  padding-left: 25px;
 
   &__img{
     max-width: 150px;
@@ -1316,7 +1321,7 @@ section:not(start){
     position: absolute;
     bottom: 0;
     left: 0;  
-    z-index: -1;
+    z-index: 1;
   }
 
   // =====================================================
@@ -1399,8 +1404,195 @@ section:not(start){
 
 .profile{
 
+  &__header{
+    width: calc(100% - 80px);
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+    padding: 0 25px;
+    height: 65px;
+    border-bottom: 1px solid #125362;
+
+    &__row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__link{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      svg{
+        margin-right: 8px;
+      }
+    }
+  }
+
   &__content{
-    margin-left: 300px;
+    margin: 15px auto 0 0px;
+    width: 100%;
+
+    &__subtitle{
+      margin: 15px auto 0 15px;
+      font-size: 18px;
+      width: max-content;
+    }
+
+    &__title{
+      margin: 15px auto 0 15px;
+      max-width: max-content;
+
+      @include media(400){
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__row{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 60px;
+    width: 100%;
+
+    @include media($lg){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__col{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0 50px;
+
+    @include media($lg){
+      margin-bottom: 50px;
+      align-items: center;
+    }
+
+    &__title{
+      margin: 0 auto 25px 0;
+      width: max-content;
+    }
+
+    &__p{
+      margin-bottom: 10px;
+
+      &__blue{
+        margin-bottom: 30px;
+        color: #00E2FF;
+      }
+    }
+
+    &__btn{
+      min-width: 200px;
+      width: 100%;
+      border: 1px solid #00E2FF;
+      box-sizing: border-box;
+      border-radius: 2.5px;
+      font-size: 16px;
+      padding: 12px 0;
+      margin-bottom: 30px;
+    }
+
+    &__img{
+      margin-bottom: 20px;
+    }
+
+    &__row{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg{
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__category{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 15px;
+
+    &__link{
+      margin: 5px;
+
+      @include media(400){
+        font-size: 16px;
+        margin: 2px;
+      }
+
+      svg{
+        margin-right: 5px;
+
+        @include media(400){
+          margin: 2px;
+        }
+      }
+    }
+  }
+
+  &__item{
+    border: 1px solid #00E2FF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-width: 250px;
+    width: 100%;
+    position: relative;
+    margin: 0 25px;
+    padding: 20px;
+
+    @include media($lg){
+      margin: 25px;
+    }
+
+    &__abs{
+      position: absolute;
+      background: #00FF19;
+      border-radius: 9px 0px;
+      color: #313131;
+      font-size: 16px;
+      padding: 2px 5px;
+      top: 0;
+      left: 0;
+    }
+
+    &__img{
+      height: 84px;
+    }
+
+    &__subp{
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 27px;
+      color: #BDBDBD;
+      margin-bottom: 20px;
+    }
+
+    &__btn{
+      margin-top: 20px;
+      padding: 8px 20px;
+      background: linear-gradient(95.85deg, #00E2FF 11.33%, #126E83 107.64%);
+      border-radius: 3px;
+      transition: 300ms ease;
+
+      &:hover{
+        box-shadow: 0 0 70px -10px #00E2FF;
+      }
+    }
   }
 
   .swiper-container {
@@ -1421,6 +1613,8 @@ section:not(start){
   .menu {
     min-width: 100px;
     width: 70%;
+    min-height: 100%;
+    height: 100%;
     max-width: 320px;
     background-color: #2c8dfb;
     color: #fff;
@@ -1429,6 +1623,9 @@ section:not(start){
   .content {
     width: 100%;
     background: #132C33;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .menu-button {
