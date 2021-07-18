@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Profile
+    link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .profile
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide.menu 
+            include components/sidebar.pug
+            +sidebar 
+          .swiper-slide.content
+            .menu-button
+              .bar
+              .bar
+              .bar
+            .profile__header
+              include components/header.pug
+              +header
+            .profile__content
+              .profile__category  
+                a(href="index.html").profile__category__link Главная
+                svg(width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M9.35355 4.80808C9.54882 4.61282 9.54882 4.29624 9.35355 4.10098L6.17157 0.918995C5.97631 0.723733 5.65973 0.723733 5.46447 0.918995C5.2692 1.11426 5.2692 1.43084 5.46447 1.6261L8.29289 4.45453L5.46447 7.28296C5.2692 7.47822 5.2692 7.7948 5.46447 7.99006C5.65973 8.18532 5.97631 8.18532 6.17157 7.99006L9.35355 4.80808ZM0 4.95453H9V3.95453H0V4.95453Z" fill="#E0E0E0")
+                a(href="#!").profile__category__link Личный кабинет
+                svg(width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M9.35355 4.80808C9.54882 4.61282 9.54882 4.29624 9.35355 4.10098L6.17157 0.918995C5.97631 0.723733 5.65973 0.723733 5.46447 0.918995C5.2692 1.11426 5.2692 1.43084 5.46447 1.6261L8.29289 4.45453L5.46447 7.28296C5.2692 7.47822 5.2692 7.7948 5.46447 7.99006C5.65973 8.18532 5.97631 8.18532 6.17157 7.99006L9.35355 4.80808ZM0 4.95453H9V3.95453H0V4.95453Z" fill="#E0E0E0")
+                a(href="#!").profile__category__link История пополнения и вывода средств
+              h1.title.profile__content__title История пополнения и вывода средств
+              .history__row
+                .history__item
+                  p.title.history__title История пополнения
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                .history__item
+                  p.title.history__title История вывода средств
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+                  p.history__p Яндекс.Деньги - <span class="light">15:44:34   13.05.2021 -</span> <span class="blue">15 000 грн</span>
+            
+        
+    
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="scripts/profile.js")
+    script(src="scripts/drop.js")

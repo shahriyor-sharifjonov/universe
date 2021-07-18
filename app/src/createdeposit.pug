@@ -1,0 +1,93 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Profile
+    link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    .profile
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide.menu 
+            include components/sidebar.pug
+            +sidebar 
+          .swiper-slide.content
+            .menu-button
+              .bar
+              .bar
+              .bar
+            .profile__header
+              include components/header.pug
+              +header
+            .profile__content
+              .profile__category  
+                a(href="index.html").profile__category__link Главная
+                svg(width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M9.35355 4.80808C9.54882 4.61282 9.54882 4.29624 9.35355 4.10098L6.17157 0.918995C5.97631 0.723733 5.65973 0.723733 5.46447 0.918995C5.2692 1.11426 5.2692 1.43084 5.46447 1.6261L8.29289 4.45453L5.46447 7.28296C5.2692 7.47822 5.2692 7.7948 5.46447 7.99006C5.65973 8.18532 5.97631 8.18532 6.17157 7.99006L9.35355 4.80808ZM0 4.95453H9V3.95453H0V4.95453Z" fill="#E0E0E0")
+                a(href="#!").profile__category__link Личный кабинет
+                svg(width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M9.35355 4.80808C9.54882 4.61282 9.54882 4.29624 9.35355 4.10098L6.17157 0.918995C5.97631 0.723733 5.65973 0.723733 5.46447 0.918995C5.2692 1.11426 5.2692 1.43084 5.46447 1.6261L8.29289 4.45453L5.46447 7.28296C5.2692 7.47822 5.2692 7.7948 5.46447 7.99006C5.65973 8.18532 5.97631 8.18532 6.17157 7.99006L9.35355 4.80808ZM0 4.95453H9V3.95453H0V4.95453Z" fill="#E0E0E0")
+                a(href="#!").profile__category__link Создать депозит
+              h1.title.profile__content__title Выбор тарифных планов
+              h1.title.profile__content__subtitle Выберите тарифный план
+              .deposit__row
+                .deposit__items
+                  .deposit__item
+                    p.deposit__item__p Вклад «на 24 часа»
+                    p.deposit__item__subp 1.3% ставка в день
+                    p.deposit__item__subp Возврат депозита через 24 часа
+                  .deposit__item
+                    p.deposit__item__p Вклад «на 7 дней»
+                    p.deposit__item__subp 1.3% ставка в день
+                    p.deposit__item__subp Капитализация: да
+                    p.deposit__item__subp Бонус в конце депозита: + 0.37%
+                  .deposit__item
+                    p.deposit__item__p Вклад «на 14 дней»
+                    p.deposit__item__subp 1.3% ставка в день
+                    p.deposit__item__subp Капитализация: да 
+                    p.deposit__item__subp Бонус в конце депозита: + 0.86%
+                  .deposit__item
+                    p.deposit__item__p Вклад «на 28 дней»
+                    p.deposit__item__subp 1.3% ставка в день
+                    p.deposit__item__subp Капитализация: да
+                    p.deposit__item__subp Бонус в конце депозита: + 1.79%
+                .deposit__content 
+                  .deposit__content__top 
+                    p.deposit__p Тариф «На 24 часа»
+                    p.deposit__p Доходность: 1.3% в день
+                  p.deposit__p Доступные средства
+                  p.deposit__mon 0.00 грн
+                  p.deposit__p Введите сумму депозита:
+                  form(action="").deposit__form
+                    input(type="text" placeholder="грн").deposit__input
+                    p.deposit__light-p Вы можете вложить от 100 грн до 10 000 000 грн
+                    button(type="submit").deposit__btn Создать депозит
+                  p.deposit__p Персональная информация по депозиту 
+                    .deposit__child
+                      .deposit__child-col
+                        p.deposit__child-p Начисленная прибыль
+                        p.deposit__child-mon + 0.00 грн
+                        p.deposit__child-p Сумма на выходе
+                        p.deposit__child-mon 0.00 грн
+                        p.deposit__child-p Дата окончания депозита
+                        p.deposit__child-mon ~ 08.05.2021 16:59 КИЕВ~ 08.05.2021 16:59 КИЕВ
+                      .deposit__child-col
+                        p.deposit__child-p Ставка:
+                        p.deposit__child-mon 1.3% в день
+                        p.deposit__child-p Бонус:
+                        p.deposit__child-mon Нет
+                        p.deposit__child-p Капитализация процентов:
+                        p.deposit__child-mon Нет
+                        p.deposit__child-p Ограничение по количеству активных инвестиций:
+                        p.deposit__child-mon Ограничения отсутствуют
+
+            
+        
+    
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="scripts/profile.js")
+    script(src="scripts/drop.js")

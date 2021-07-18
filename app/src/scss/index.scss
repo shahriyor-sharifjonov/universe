@@ -1530,15 +1530,15 @@ section:not(start){
     &__link{
       margin: 5px;
 
-      @include media(400){
-        font-size: 16px;
+      @include media($md){
+        font-size: 14px;
         margin: 2px;
       }
 
       svg{
         margin-right: 5px;
 
-        @include media(400){
+        @include media($md){
           margin: 2px;
         }
       }
@@ -1671,5 +1671,277 @@ section:not(start){
     -webkit-transform: translateY(-15px) rotate(45deg);
     -ms-transform: translateY(-15px) rotate(45deg);
     transform: translateY(-15px) rotate(45deg);
+  }
+}
+
+// =====================================================
+// ======================deposit========================
+// =====================================================
+
+.deposit{
+
+  &__row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include media($sm){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__input{
+    margin-bottom: 8px;
+    border: 1px solid #00E2FF;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: none;
+    padding: 10px;
+    max-width: 300px;
+    width: 100%;
+    &::placeholder{
+      color: #fff;
+    }
+  }
+
+  &__light-p{
+    font-weight: 200;
+    font-size: 11px;
+    line-height: 16px;
+    color: #E0E0E0;
+  }
+
+  &__btn{
+    margin-bottom: 25px;
+    background: linear-gradient(95.85deg, #00E2FF 11.33%, #126E83 107.64%);
+    border-radius: 7px;
+    border: none;
+    color: #fff;
+    padding: 15px 50px;
+    margin-top: 28px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  &__child{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @include media($sm){
+      flex-direction: column;
+    }
+
+    &-p{
+      font-size: 14px;
+    }
+
+    &-mon{
+      font-size: 16px;
+      color: #00E2FF;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px;
+
+    @include media($sm){
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item{
+    border: 1px solid #00E2FF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    max-width: 250px;
+    width: 100%;
+    margin-top: 25px;
+    padding: 20px;
+
+    &__p{
+      max-width: max-content;
+      margin-bottom: 8px;
+    }
+
+    &__subp{
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      color: #FFFFFF;
+      max-width: max-content;
+    }
+  }
+
+  &__content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    margin: 0 auto 0 auto;
+
+    &__top{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__p{
+    margin-bottom: 20px;
+  }
+
+  &__mon{
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #00E2FF;
+  }
+}
+
+// =====================================================
+// ======================history========================
+// =====================================================
+
+.history{
+
+  &__row{
+    display: flex;
+    width: 100%;
+
+    @include media($md){
+      flex-wrap: wrap;
+    }      
+  }
+
+  &__item{
+    width: 50%;
+
+    @include media($md){
+      width: 100%;
+      margin-bottom: 40px;
+    }        
+  }
+
+  &__title{
+    max-width: max-content;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  &__p{
+    max-width: 100%;
+    width: 100%;
+    text-align-last: left;
+    margin-left: 30px;
+
+    @include media(380){
+      font-size: 14px;
+    }
+
+    .light{
+      font-weight: 200;
+    }
+    .blue{
+      color: #00E2FF;
+    }
+  }
+}
+
+// =====================================================
+// ========================stat=========================
+// =====================================================
+
+.stat{
+
+  &__title{
+    font-size: 18px;  
+    margin-top: 20px;
+  }
+
+  &__blue{
+    color: #00E2FF;
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  &__row{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+
+    @include media($lg){
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item{
+    width: 50%;
+
+    @include media($lg){
+      width: 100%;
+    }
+  }
+
+  &__p-light{
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 300px;
+    margin: 0 auto;
+    color: #E0E0E0;
+  }
+
+  &__btns{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  &__btn{
+    font-weight: 300;
+    padding: 8px 20px;
+    margin: 10px auto;
+    border: 1px solid #00E2FF;
+    box-sizing: border-box;
+    border-radius: 2.5px;
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__desc{
+    margin-top: 40px;
+
+    &__item{
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+
+      @include media($sm){
+        padding: 0 15px;
+      }
+    }
+
+    &__p{
+      font-size: 16px;
+      text-align: left;
+
+      &.blue{
+        color: #00E2FF;
+      }
+
+      span{
+        color: #BDBDBD;
+        font-weight: 200;
+      }
+    }
   }
 }
