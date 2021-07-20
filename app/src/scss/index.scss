@@ -1784,6 +1784,7 @@ section:not(start){
 
       &:checked~span{
         border: 1px solid #132C33;
+        background: #fff;
 
         &::before{
           content: '';
