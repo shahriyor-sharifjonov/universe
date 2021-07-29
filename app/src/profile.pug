@@ -58,8 +58,23 @@ html(lang="en")
                   p.profile__col__p__blue oleg222@gmail.com
                   p.profile__col__p Пароль
                   p.profile__col__p__blue **********
-                  a(href="#!").profile__col__btn Изменить пароль
+                  a(href="#editpassword").profile__col__btn Изменить пароль
                   a(href="#!").profile__col__btn Выйти из аккаунта
+            #editpassword.popup 
+              .popup__body 
+                h2.popup__title Изменить пароль
+                form.popup__form(action="#closepopup")
+                  label(for="#oldpassword").popup__label Старый пароль
+                  input(type="text" id="oldpassword").popup__input  
+                  label(for="#newpassword").popup__label Новый пароль
+                  input(type="text" id="newpassword").popup__input  
+                  label(for="#repeatpassword").popup__label Повторить новый пароль
+                  input(type="text" id="repeatpassword").popup__input  
+                  button(type="submit").popup__btn Сохранить изменения
+              a(href="#closepopup").popup__close
+            #closepopup 
+
+
                   
 
     
