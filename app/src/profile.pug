@@ -49,8 +49,8 @@ html(lang="en")
                   p.profile__col__p__blue 099 999 99 99
                   p.profile__col__p Логин
                   p.profile__col__p__blue olegsmrn123
-                  a(href="#!").profile__col__btn Редактировать данные
-                  a(href="#!").profile__col__btn Удалить аккаунт
+                  a(href="#editprofile").profile__col__btn Редактировать данные
+                  a(href="#deleteprofile").profile__col__btn Удалить аккаунт
                 .profile__col
                   p.profile__col__p Фамилия
                   p.profile__col__p__blue Смирнов
@@ -60,19 +60,43 @@ html(lang="en")
                   p.profile__col__p__blue **********
                   a(href="#editpassword").profile__col__btn Изменить пароль
                   a(href="#!").profile__col__btn Выйти из аккаунта
-            #editpassword.popup 
-              .popup__body 
-                h2.popup__title Изменить пароль
-                form.popup__form(action="#closepopup")
-                  label(for="#oldpassword").popup__label Старый пароль
-                  input(type="text" id="oldpassword").popup__input  
-                  label(for="#newpassword").popup__label Новый пароль
-                  input(type="text" id="newpassword").popup__input  
-                  label(for="#repeatpassword").popup__label Повторить новый пароль
-                  input(type="text" id="repeatpassword").popup__input  
-                  button(type="submit").popup__btn Сохранить изменения
-              a(href="#closepopup").popup__close
-            #closepopup 
+      #editpassword.popup 
+        .popup__body 
+          h2.popup__title Изменить пароль
+          form.popup__form(action="#closepopup")
+            label(for="#oldpassword").popup__label Старый пароль
+            input(type="text" id="oldpassword").popup__input  
+            label(for="#newpassword").popup__label Новый пароль
+            input(type="text" id="newpassword").popup__input  
+            label(for="#repeatpassword").popup__label Повторить новый пароль
+            input(type="text" id="repeatpassword").popup__input  
+            button(type="submit").popup__btn Сохранить изменения
+        a(href="#closepopup").popup__close
+      #editprofile.popup 
+        .popup__body 
+          h2.popup__title Изменить пароль
+          form.popup__form(action="#closepopup")
+            label(for="#oldpassword").popup__label Имя: Олег
+            input(type="text" id="oldpassword" placeholder="Введите новое имя").popup__input  
+            label(for="#newpassword").popup__label Фамилия: Смирнов
+            input(type="text" id="newpassword" placeholder="Введите новую фамилию").popup__input  
+            label(for="#repeatpassword").popup__label Телефон: 099 999 99 99
+            input(type="text" id="repeatpassword" placeholder="Введите новый телефон").popup__input  
+            label(for="#repeatpassword").popup__label E-mail: oleg222@gmail.com
+            input(type="text" id="repeatpassword" placeholder="Введите новый e-mail").popup__input  
+            button(type="submit").popup__btn Сохранить изменения
+        a(href="#closepopup").popup__close
+      #deleteprofile.popup 
+        .popup__body.nonbg
+          h2.popup__title Вы желаете удалить профиль?
+          p.popup__p После удаление учетной записи все ваши депозиты будут уничтожены и средства будут зачислены в систему без возврата
+          h2.popup__subtitle Вы подтверждаете удаление?
+          form.popup__btns(action="#closepopup")
+            button(type="submit").popup__btn.uncurrent Да            
+            button(type="submit").popup__btn Нет            
+        a(href="#closepopup").popup__close
+
+      #closepopup 
 
 
                   
