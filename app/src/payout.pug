@@ -40,19 +40,56 @@ html(lang="en")
                   img(src="images/bitcoin.webp", alt="").profile__item__img
                   p.profile__item__p BitCoin (BTC)
                   p.profile__item__subp Комиссия 0%
-                  a(href="#!").profile__item__btn Вывести 
+                  a(href="#payout").profile__item__btn Вывести 
                 .profile__item
                   p.profile__item__abs Активно
                   img(src="images/card.webp", alt="").profile__item__img
                   p.profile__item__p Банковская карта
                   p.profile__item__subp Комиссия 0%
-                  a(href="#!").profile__item__btn Вывести 
+                  a(href="#payout").profile__item__btn Вывести 
                 .profile__item
                   p.profile__item__abs Активно
                   img(src="images/advcash.webp", alt="").profile__item__img
                   p.profile__item__p Advanced Cash
                   p.profile__item__subp Комиссия 0%
-                  a(href="#!").profile__item__btn Вывести 
+                  a(href="#payout").profile__item__btn Вывести 
+    #payout.popup 
+      .popup__top.popup__payout__top
+        h3.popup__subtitle Вывод средств через BitCoin (BTC)
+      .popup__content.popup__payout__content
+        p.popup__content__p Инструкция по выводу средств
+        .popup__payout__trick
+          p.popup__payout__p Выберите платежную систему
+          p.popup__payout__p Введите сумму (минимальная сумма для вывода - 100 грн)
+          p.popup__payout__p Внимание! Убедитесь в правильности Ваших платежных реквизитов
+          p.popup__payout__p В течение 24-х часов вы получите выплату на выбранный Вами электронный кошелек.
+          p.popup__payout__p Лимиты: В течении рабочего дня заявка на вывод средств может быть создана один раз. 
+          p.popup__payout__p Интервал между созданием заявок должен составлять не менее 24-х часов.
+        h3.popup__subtitle.popup__payout__subtitle Доступные средства
+        p.popup__balance 0.00 грн
+        p.popup__text Введите ваш номер кошелька
+        input(type="text").popup__input.max-190
+        input(type="text" placeholder="Сумма").popup__input.max-190
+        
+        a(href="#payout-success").popup__btn.popup__withdraw__btn.popup__payout__btn Пополнить
+      a(href="#closepopup").popup__close
+    #payout-success.popup 
+      .popup__body.nonbg
+        svg(width='50' height='50' viewbox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M44.1406 50H5.85938C2.62833 50 0 47.3717 0 44.1406V5.85938C0 2.62833 2.62833 0 5.85938 0H44.1406C47.3717 0 50 2.62833 50 5.85938V44.1406C50 47.3717 47.3717 50 44.1406 50ZM5.85938 3.90625C4.78249 3.90625 3.90625 4.78249 3.90625 5.85938V44.1406C3.90625 45.2175 4.78249 46.0938 5.85938 46.0938H44.1406C45.2175 46.0938 46.0938 45.2175 46.0938 44.1406V5.85938C46.0938 4.78249 45.2175 3.90625 44.1406 3.90625H5.85938ZM42.0799 14.7797L39.1697 12.1735L21.1067 32.346L10.6232 22.3804L7.9319 25.2113L21.3322 37.9501L42.0799 14.7797Z' fill='#00E2FF')
+        h3.popup__title.popup__payout__title Ваш вывод будет зачислен на протяжение 24-72 часов
+        a(href="#closepopup").popup__btn.max-300 Вернуться назад
+      a(href="#closepopup").popup__close
+    #payout-error.popup 
+      .popup__body.nonbg
+        svg(width='50' height='50' viewbox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M44.1406 50H5.85938C2.62833 50 0 47.3717 0 44.1406V5.85938C0 2.62833 2.62833 0 5.85938 0H44.1406C47.3717 0 50 2.62833 50 5.85938V44.1406C50 47.3717 47.3717 50 44.1406 50ZM5.85938 3.90625C4.78249 3.90625 3.90625 4.78249 3.90625 5.85938V44.1406C3.90625 45.2175 4.78249 46.0938 5.85938 46.0938H44.1406C45.2175 46.0938 46.0938 45.2175 46.0938 44.1406V5.85938C46.0938 4.78249 45.2175 3.90625 44.1406 3.90625H5.85938Z' fill='#FF0000')
+          path(d='M27.6433 25.0012L36.6166 16.0275C36.8634 15.7805 36.9996 15.4509 37 15.0995C37 14.7479 36.8638 14.418 36.6166 14.1713L35.8302 13.3852C35.583 13.1376 35.2535 13.002 34.9017 13.002C34.5504 13.002 34.2209 13.1376 33.9737 13.3852L25.0004 22.3582L16.0267 13.3852C15.7799 13.1376 15.4501 13.002 15.0985 13.002C14.7473 13.002 14.4176 13.1376 14.1707 13.3852L13.384 14.1713C12.872 14.6833 12.872 15.5161 13.384 16.0275L22.3575 25.0012L13.384 33.9744C13.137 34.2219 13.001 34.5514 13.001 34.9028C13.001 35.2542 13.137 35.5838 13.384 35.831L14.1705 36.6172C14.4174 36.8646 14.7473 37.0004 15.0983 37.0004C15.45 37.0004 15.7797 36.8646 16.0265 36.6172L25.0002 27.6439L33.9735 36.6172C34.2207 36.8646 34.5502 37.0004 34.9015 37.0004H34.9019C35.2533 37.0004 35.5828 36.8646 35.83 36.6172L36.6164 35.831C36.8632 35.584 36.9994 35.2542 36.9994 34.9028C36.9994 34.5514 36.8632 34.2219 36.6164 33.9746L27.6433 25.0012Z' fill='#FF0000')
+        h3.popup__title Ошибка вывода средств!
+        a(href="#closepopup").popup__btn.max-500 Попробуй снова
+      a(href="#closepopup").popup__close
+
+    #closepopup                   
             
         
     

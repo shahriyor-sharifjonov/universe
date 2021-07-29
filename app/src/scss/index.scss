@@ -2078,6 +2078,11 @@ section:not(start){
       text-align: center;
       margin-bottom: 30px;
     }
+
+    @include media($md){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   &__row{
@@ -2225,6 +2230,11 @@ section:not(start){
     color: #fff;
     font-family: Oswald;
     width: 274px;
+
+    &.max-190{
+      max-width: 190px !important;
+      margin-top: 10px;
+    }
   }
 
   &__p{
@@ -2296,6 +2306,87 @@ section:not(start){
       box-shadow: 0 0 20px 0px #00E2FF;
       background: linear-gradient(95.85deg, #00E2FF 11.33%, #126E83 107.64%);
       border: none;
+    }
+  }
+
+  &__text{
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-bottom: 0px;
+  }
+
+  &__balance{
+    max-width: 190px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #00E2FF;
+    border: 1px solid #00E2FF;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 5px;
+  }
+
+  &__payout{
+
+    &__title{
+
+      @include media($md){
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    &__content{
+      padding-top: 15px !important;
+      padding-bottom: 15px !important;
+    }
+
+    &__top{
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    &__btn{
+      margin-bottom: 0px !important;
+      margin-top: 8px !important;
+    }
+
+    &__trick{
+      margin-top: 20px;
+    }
+
+    &__p{
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      color: #FFFFFF;
+
+      &.mt-10{
+        margin-top: 10px;
+      }
+    }
+
+    &__subtitle{
+      margin-top: 10px;
+      margin-bottom: 10px !important;
     }
   }
 
