@@ -17,15 +17,13 @@ html(lang="en")
         .header__menu 
           ul.header__list
             li.link-1
-              a(href="#!").header__link Меню
+              a(href="#about").header__link О команде
             li.link-2
-              a(href="#!").header__link Меню
+              a(href="#stat").header__link Статистика
             li.link-3
-              a(href="#!").header__link Меню
+              a(href="#payments").header__link Выплаты
             li.link-4
-              a(href="#!").header__link Меню
-            li.link-5
-              a(href="#!").header__link Меню
+              a(href="#answers").header__link Вопросы и ответы
           button(onclick="openRegister()").header__btn Мой аккаунт
           a(href="#!").header__lang 
             svg(width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -45,8 +43,8 @@ html(lang="en")
             img(src="images/elon.webp", alt="elon musk" data-value="-1").intro__img.parallax
           .intro__col
             h1.intro__title Инвестиции в будущее с великими умами
-            a(href="#!").intro__btn Инвестировать
-      section.about
+            a(href="#!" onclick="openRegister()").intro__btn Инвестировать
+      section.about#about
         .about__row
           .container
             .about__col
@@ -54,7 +52,7 @@ html(lang="en")
               p.about__p Я профессор Томас Лорен и через мгновение я покажу простой способ заработать действительно большие деньги. Вы узнаете, как заработать в день 100-150€, на 7 дней, окажешься с 1000€ наличными, и через месяц даже 5000 €. Буквально через несколько десятков секунд я открою каждого конкретного метода, который – если он сделает хотя бы половину того,  что делает меня – тебе начать зарабатывать суммы денег.
             .about__col
               img(src="images/about.webp", alt="").about__img
-      section.benefit
+      section.benefit#benefit
         .benefit__row 
           .container 
             .benefit__col
@@ -62,17 +60,17 @@ html(lang="en")
             .benefit__col
               h2.title.benefit__title Как и сколько вы получите
               p.benefit__p Доходность до <span>3000%</span>  в месяц. Мы используем новешие криптовалюты, которые только вышли на рынок и на этом мы взлетаем вверх по графику доходности.
-              a(href="#!").benefit__btn Инвестировать 
-      section.start
+              a(href="#!"  onclick="openRegister()").benefit__btn Инвестировать 
+      section.start#start
         .start__row
           .container
             .start__col
               h2.title Как начать работать с нами
               p.start__p Для начала работы вы можете приобрести один из <span>лимитированных пакетов</span>, которых осталось всего лишь 50 штук.
-              a(href="#!").start__btn Начать сотрудничество 
+              a(href="#!" onclick="openRegister()").start__btn Начать сотрудничество 
             .start__col
               img(src="images/start.webp", alt="").start__img
-      section.statistics
+      section.statistics#stat
         img(src="images/statistics.webp", alt="").statistics__img
         .container
           h2.title Статистика
@@ -89,7 +87,7 @@ html(lang="en")
             .statistics__col
               h1.statistics__title 10 578 998 грн
               p.statistics__p Выведено средств пользователями
-      section.payments
+      section.payments#payments
         .container
           h2.title Выплаты
           p.payments__p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac nulla eu tellus hac ullamcorper dictumst aliqueta. Tellus auctor sed neque, varius massa ac diam.
@@ -122,11 +120,7 @@ html(lang="en")
               p.payments__col__p Alex***@****.com
               p.payments__col__p Alex***@****.com
               p.payments__col__p Alex***@****.com
-      section.schedule
-        .container
-          h2.title График
-          img(src="images/schedule.webp", alt="").schedule__img
-      section.answers
+      section.answers#answers
         .answers__row 
           .container
             .answers__col
@@ -160,22 +154,20 @@ html(lang="en")
           h3.footer__title Информация
           ul.footer__list 
             li.footer__li   
-              a(href="#!").footer__link О команде
+              a(href="#about").footer__link О команде
             li.footer__li   
-              a(href="#!").footer__link Статистика
+              a(href="#stat").footer__link Статистика
             li.footer__li   
-              a(href="#!").footer__link Выплаты
+              a(href="#payments").footer__link Выплаты
             li.footer__li   
-              a(href="#!").footer__link График
-            li.footer__li   
-              a(href="#!").footer__link Вопросы и ответы
+              a(href="#answers").footer__link Вопросы и ответы
         .footer__col
           h3.footer__title Информация
           ul.footer__list 
             li.footer__li   
-              a(href="#!").footer__link Как и сколько вы получите
+              a(href="#benefit").footer__link Как и сколько вы получите
             li.footer__li   
-              a(href="#!").footer__link Как начать работать с нами
+              a(href="#start").footer__link Как начать работать с нами
         .footer__col__df 
           button(onclick="openRegister()").header__btn.footer__btn Мой аккаунт
           a(href="#!").header__lang.footer__lang

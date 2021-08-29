@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 
   &:focus{
     outline: none;
@@ -171,7 +172,7 @@ section:not(start){
   }
 
   &__link{
-    margin: 0 22px;
+    margin: 0 12px;
     font-weight: 300;
     font-size: 18px;
     line-height: 36px;
@@ -1504,6 +1505,14 @@ section:not(start){
       font-size: 16px;
       padding: 12px 0;
       margin-bottom: 30px;
+      &2{
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        color: #fff;
+        font-size: 18px;
+      }
     }
 
     &__img{
@@ -1568,6 +1577,10 @@ section:not(start){
       padding: 2px 5px;
       top: 0;
       left: 0;
+      &_disabled{
+        background: red;
+        color: #fff;
+      }
     }
 
     &__img{
@@ -1591,6 +1604,13 @@ section:not(start){
 
       &:hover{
         box-shadow: 0 0 70px -10px #00E2FF;
+      }
+
+      &_disabled{
+        background: rgb(109, 109, 109);
+        &:hover{
+          box-shadow: none;
+        }
       }
     }
   }
@@ -1921,6 +1941,11 @@ section:not(start){
   &__title{
     font-size: 18px;  
     margin-top: 20px;
+  }
+
+  &__btn.current{
+    background: linear-gradient( 95.85deg, #00E2FF 11.33%, #126E83 107.64%);
+    border: none;
   }
 
   &__blue{
@@ -2271,6 +2296,10 @@ section:not(start){
     padding-bottom: 2px;
     margin: 0 10px;
     min-width: 117px;
+
+    &-center{
+      margin: 20px 0 0 0;
+    }
 
     &.max-300{
       max-width: 300px;
