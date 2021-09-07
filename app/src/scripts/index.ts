@@ -1,24 +1,3 @@
-const headerButton: HTMLButtonElement =
-document.querySelector(".header__button");
-const headerMenu: HTMLUListElement = document.querySelector(".header__menu");
-let menuOpened = false;
-const menuToggle = () => {
-  menuOpened = !menuOpened;
-  headerButton.classList.toggle("open");
-  headerMenu.classList.toggle("open");
-};
-
-headerButton.onclick = menuToggle;
-
-window.onclick = (e: MouseEvent) => {
-  if (
-    menuOpened &&
-    !e.composedPath().includes(headerButton) &&
-    !e.composedPath().includes(headerMenu)
-  )
-    menuToggle();
-};
-
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
@@ -59,4 +38,41 @@ function enableScroll() {
   window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
   window.removeEventListener('touchmove', preventDefault, wheelOpt);
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+
+const headerButton: HTMLButtonElement =
+document.querySelector(".header__button");
+const headerMenu: HTMLUListElement = document.querySelector(".header__menu");
+let menuOpened = false;
+const menuToggle = () => {
+  menuOpened = !menuOpened;
+  checkMenu()
+  headerButton.classList.toggle("open");
+  headerMenu.classList.toggle("open");
+};
+
+function checkMenu(){
+  if(menuOpened){
+    disableScroll()
+  }else{
+    enableScroll()
+  }
+}
+
+headerButton.onclick = menuToggle;
+
+window.onclick = (e: MouseEvent) => {
+  if (
+    menuOpened &&
+    !e.composedPath().includes(headerButton) &&
+    !e.composedPath().includes(headerMenu)
+  )
+    menuToggle();
+};
+
+window.onclick = function(e){
+  if(e.target.classList.contains('header__link')){
+    menuToggle()
+  }
 }
